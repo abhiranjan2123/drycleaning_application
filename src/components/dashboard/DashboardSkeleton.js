@@ -18,9 +18,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 import { Customer } from "./customer/Customer";
-import { History } from "./history/History";
+// import { History } from "./history/History";
 import { Item } from "./item/Item";
-import { Vehicle } from "./vehicle/Vehicle";
+// import { Vehicle } from "./vehicle/Vehicle";
 import { Worker } from "./worker/Worker";
 
 class NavItem {
@@ -110,7 +110,7 @@ export function DashboardSkeleton({ component: Component }) {
               <AppLabelAndLogo></AppLabelAndLogo>
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", sm: "block" ,md:"flex"} }}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#fff" }}>
                 <Link
@@ -122,7 +122,7 @@ export function DashboardSkeleton({ component: Component }) {
               </Button>
               
             ))}
-            <Button color="success" sx={{left:"900px"}} onClick={handleLogout}>
+            <Button color="primary" variant="contained"  sx={{marginLeft:"2rem"}}onClick={handleLogout}>
               Logout
             </Button>
           </Box>
